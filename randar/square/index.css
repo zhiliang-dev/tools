@@ -1,0 +1,35 @@
+.radar {
+  overflow: hidden;
+  position: relative;
+  margin: 200px auto;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border: 1px solid #5ef2ff;
+  box-sizing: border-box;
+}
+
+.fan::after {
+  content: "";
+  width: 200px;
+  height: 100px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 200px;
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(to top, transparent, #5ef2ff);
+  border-image-slice: 3;
+  background: transparent;
+  background-image: linear-gradient(to top, transparent, #9bfdfd);
+  animation: rotateAnimate 2s linear infinite;
+}
+
+@keyframes rotateAnimate {
+  from {
+    margin-top: 200px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
